@@ -28,3 +28,10 @@ def get_redfin_sales(zip_code, months=24, min_sales=3):
         return avg_price, top_sales
     else:
         return None, []
+
+if __name__ == "__main__":
+    avg_price, comps = get_redfin_sales("20148")
+    print("Average Price:", avg_price)
+    print("Comparables:")
+    for c in comps:
+        print(c)
