@@ -18,6 +18,8 @@ def estimate():
         })
     else:
         return jsonify({"message": "Not enough sales data found"}), 404
-
+@app.route("/", methods=["GET"])
+def home():
+    return "Welcome to the Redfin Sales Estimator API. USE POST /estimate with JSON: {"\zip\":\"YOUR_ZIP_CODE\"}
 if __name__ == "__main__":
     app.run()
