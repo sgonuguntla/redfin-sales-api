@@ -1,7 +1,7 @@
 import requests
 from bs4 import BeautifulSoup
 
-def get_redfin_sales(zip_code, months=6, min_sales=3):
+def get_redfin_sales(zip_code, months=24, min_sales=3):
     url = f"https://www.redfin.com/zipcode/{zip_code}/filter/include=sold-{months}mo"
     headers = {
         "User-Agent": "Mozilla/5.0"
